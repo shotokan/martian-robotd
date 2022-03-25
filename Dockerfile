@@ -18,7 +18,7 @@ RUN go mod download
 COPY . .
 
 # Build the application
-RUN go build -o main .
+RUN go build -o main cmd/cli/main.go 
 
 # Move to /app directory as the place for resulting binary folder
 WORKDIR /app

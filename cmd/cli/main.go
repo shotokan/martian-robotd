@@ -41,7 +41,7 @@ func main() {
 
 		if initializedRobot {
 			fmt.Println(data)
-			commands = robot.ParseCommands(data)
+			commands = robot.ParseInstruction(data)
 			newRobot.On(commands)
 			outputs = append(outputs, newRobot.String())
 			newRobot.PrintLastPosition()
@@ -51,7 +51,6 @@ func main() {
 
 	fmt.Println("-- Outputs --")
 	for _, o := range outputs {
-
 		fmt.Println(o)
 	}
 }

@@ -22,7 +22,7 @@ We can run this program in two ways using docker:
 
 >>>>Interactive mode
 
-Passing a json one at a time
+Writing position and instructions
 
 ```bash
 > docker run -i --rm draftea-challenge
@@ -71,7 +71,7 @@ Passing several operations from file.
 ```bash
 # it's necessary to install GO and dependencies
 go mod download 
-go run main.go < data.txt
+go run ./cmd/cli/main.go < ./data.txt  
 
 -- New Robot --
 1 1 E
@@ -103,7 +103,7 @@ LLFFFLFLFL
     2 3 S
 
 # Or just 
-go run main.go
+go run ./cmd/cli/main.go
 
 5 3
 1 1 E

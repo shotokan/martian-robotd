@@ -71,7 +71,7 @@ func TestParseCommand(t *testing.T) {
 
 	for _, tt := range inputs {
 		t.Run(tt.description, func(t *testing.T) {
-			commands := ParseCommands(tt.input)
+			commands := ParseInstruction(tt.input)
 			is.Equal(commands, tt.expected)
 		})
 	}

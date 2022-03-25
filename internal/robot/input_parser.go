@@ -106,7 +106,7 @@ func parseCoordinate(v string) int32 {
 
 // Parse instruction input to chars to create
 // commands that understand the robot and returns a slice of commands
-func ParseCommands(rawCommands string) []Command {
+func ParseInstruction(rawCommands string) []Command {
 	if len(rawCommands) > 100 {
 		panic("All instruction strings will be less than 100 characters in length.")
 	}
